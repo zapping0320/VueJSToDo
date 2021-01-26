@@ -18,8 +18,7 @@ export default {
 
     methods :{
         removeTodo(todoItem, index){
-            localStorage.setItem(this.newTodoItem, this.newTodoItem)
-            this.todoItems.splice(index, 1);
+            this.$emit('removeTodo', todoItem, index);
         }
     }
 }
