@@ -30,8 +30,10 @@ export default {
 
   methods:{
     addTodo(todoItem) {
-       localStorage.setItem(this.newTodoItem, this.newTodoItem);
+       var obj = {completed: false, item: this.newTodoItem };
+       localStorage.setItem(this.newTodoItem, JSON.stringify(obj));
        this.todoItems.push(todoItem);
+       console.log("add = "+ this.newTodoItem);
     },
 
     clearAll() {
@@ -62,7 +64,7 @@ export default {
 <style>
   body {
         text-align: center;
-        background-color: #f6f6f8;
+        background-color: #f6f6f6;
     }
 
     input {
