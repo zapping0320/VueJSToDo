@@ -45,16 +45,26 @@ export default {
         border-radius: 5px;
     }
 
+    .removeBtn {
+        margin-left: auto;
+        color: #de4343;
+    }
+
     .checkBtn {
         line-height: 45px;
         color:  #62acde;
         margin-right: 5px;
     }
 
-    .removeBtn {
-        margin-left: auto;
-        color: #de4343;
+    .checkBtnCompleted {
+        color: #b3adad;
     }
+
+    .textCompleted {
+        text-decoration: line-through;
+        color: #b3adad;
+    }
+   
 
     .list-enter-active, .list-leave-active {
         transition: all 1s;
