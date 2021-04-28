@@ -23,17 +23,17 @@ export default {
   created(){
         if (localStorage.length > 0) {
             for (var i = 0; i < localStorage.length; i++) {
-                this.todoItems.push(localStorage.key(i));
+                this.todoItems.push(JSON.parse(localStorage.key(i)));
             }
         }
     },
 
   methods:{
     addTodo(todoItem) {
-       var obj = {completed: false, item: this.newTodoItem };
-       localStorage.setItem(this.newTodoItem, JSON.stringify(obj));
-       this.todoItems.push(todoItem);
-       console.log("add = "+ this.newTodoItem);
+       var obj = {completed: false, item: todoItem};
+       localStorage.setItem(todoItem, JSON.stringify(obj));
+       this.todoItems.push(obj);
+       console.log("add = "+ todoItem);
     },
 
     clearAll() {
