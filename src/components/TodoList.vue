@@ -22,8 +22,7 @@ export default {
             this.$emit('removeTodo', todoItem, index);
         },
         toggleComplete : function(todoItem, index){
-            console.log(todoItem);
-            todoItem.comleted = !todoItem.comleted;
+            this.$emit('toggleItem', todoItem, index);
         }
     }
 }

@@ -19,7 +19,7 @@ export default {
 
     methods: {
         addTodo() {
-            if( this.newTodoItem != "") {
+            if( this.newTodoItem !== "") {
                 var value = this.newTodoItem && this.newTodoItem.trim();
                 this.$emit('addTodo', value);
                 this.clearInput();
