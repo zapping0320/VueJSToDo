@@ -73,7 +73,7 @@ export default {
 <style>
   body {
         text-align: center;
-        background-color: #f6f6f6;
+        background-color: #f6f6f8;
     }
 
     input {
